@@ -49,7 +49,7 @@ pipeline {
 			steps {
 				//"docker build -t mtmonroe/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					docker.build("mtmonroe/currency-exchange-devops:${env.BUILD_TAG}")
+					dockerImage = docker.build("mtmonroe/currency-exchange-devops:${env.BUILD_TAG}")
 				}
 			}
 		}
